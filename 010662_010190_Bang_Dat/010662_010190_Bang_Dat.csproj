@@ -60,6 +60,18 @@
     </Compile>
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="ucControl\ucSapXepDanhBa.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="ucControl\ucSapXepDanhBa.Designer.cs">
+      <DependentUpon>ucSapXepDanhBa.cs</DependentUpon>
+    </Compile>
+    <Compile Include="ucControl\ucNhomDanhBa.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="ucControl\ucNhomDanhBa.Designer.cs">
+      <DependentUpon>ucNhomDanhBa.cs</DependentUpon>
+    </Compile>
     <Compile Include="ucControl\ucSuaDanhBa.cs">
       <SubType>UserControl</SubType>
     </Compile>
@@ -96,6 +108,12 @@
       <AutoGen>True</AutoGen>
       <DependentUpon>Resources.resx</DependentUpon>
     </Compile>
+    <EmbeddedResource Include="ucControl\ucNhomDanhBa.resx">
+      <DependentUpon>ucNhomDanhBa.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ucControl\ucSapXepDanhBa.resx">
+      <DependentUpon>ucSapXepDanhBa.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="ucControl\ucSuaDanhBa.resx">
       <DependentUpon>ucSuaDanhBa.cs</DependentUpon>
     </EmbeddedResource>

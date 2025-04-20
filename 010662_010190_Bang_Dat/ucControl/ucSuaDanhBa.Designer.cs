@@ -118,7 +118,7 @@
             this.tableLayoutPanel2.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 71F));
             this.tableLayoutPanel2.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 149F));
             this.tableLayoutPanel2.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 92F));
-            this.tableLayoutPanel2.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 172F));
+            this.tableLayoutPanel2.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 173F));
             this.tableLayoutPanel2.Controls.Add(this.txtSuaGhiChu, 5, 0);
             this.tableLayoutPanel2.Controls.Add(this.txtSuaEmail, 1, 0);
             this.tableLayoutPanel2.Controls.Add(this.label6, 4, 0);
@@ -153,12 +153,12 @@
             this.txtSuaGhiChu.FocusedState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
             this.txtSuaGhiChu.Font = new System.Drawing.Font("Segoe UI", 9F);
             this.txtSuaGhiChu.HoverState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
-            this.txtSuaGhiChu.Location = new System.Drawing.Point(647, 4);
+            this.txtSuaGhiChu.Location = new System.Drawing.Point(646, 4);
             this.txtSuaGhiChu.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.txtSuaGhiChu.Name = "txtSuaGhiChu";
             this.txtSuaGhiChu.PlaceholderText = "";
             this.txtSuaGhiChu.SelectedText = "";
-            this.txtSuaGhiChu.Size = new System.Drawing.Size(167, 38);
+            this.txtSuaGhiChu.Size = new System.Drawing.Size(168, 38);
             this.txtSuaGhiChu.TabIndex = 9;
             // 
             // txtSuaEmail
@@ -179,7 +179,7 @@
             this.txtSuaEmail.Name = "txtSuaEmail";
             this.txtSuaEmail.PlaceholderText = "";
             this.txtSuaEmail.SelectedText = "";
-            this.txtSuaEmail.Size = new System.Drawing.Size(236, 38);
+            this.txtSuaEmail.Size = new System.Drawing.Size(235, 38);
             this.txtSuaEmail.TabIndex = 7;
             // 
             // label6
@@ -187,7 +187,7 @@
             this.label6.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.label6.AutoSize = true;
             this.label6.Font = new System.Drawing.Font("Times New Roman", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label6.Location = new System.Drawing.Point(562, 12);
+            this.label6.Location = new System.Drawing.Point(561, 12);
             this.label6.Name = "label6";
             this.label6.Size = new System.Drawing.Size(72, 22);
             this.label6.TabIndex = 6;
@@ -199,7 +199,7 @@
             this.label4.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.label4.AutoSize = true;
             this.label4.Font = new System.Drawing.Font("Times New Roman", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label4.Location = new System.Drawing.Point(339, 12);
+            this.label4.Location = new System.Drawing.Point(338, 12);
             this.label4.Name = "label4";
             this.label4.Size = new System.Drawing.Size(57, 22);
             this.label4.TabIndex = 4;
@@ -230,7 +230,7 @@
             this.btnHuy.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(90)))), ((int)(((byte)(95)))), ((int)(((byte)(106)))));
             this.btnHuy.Font = new System.Drawing.Font("Times New Roman", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnHuy.ForeColor = System.Drawing.Color.White;
-            this.btnHuy.Location = new System.Drawing.Point(406, 49);
+            this.btnHuy.Location = new System.Drawing.Point(405, 49);
             this.btnHuy.Name = "btnHuy";
             this.btnHuy.Size = new System.Drawing.Size(143, 45);
             this.btnHuy.TabIndex = 0;
@@ -248,9 +248,9 @@
             this.btnXacNhan.FillColor = System.Drawing.Color.CornflowerBlue;
             this.btnXacNhan.Font = new System.Drawing.Font("Times New Roman", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnXacNhan.ForeColor = System.Drawing.Color.White;
-            this.btnXacNhan.Location = new System.Drawing.Point(647, 49);
+            this.btnXacNhan.Location = new System.Drawing.Point(646, 49);
             this.btnXacNhan.Name = "btnXacNhan";
-            this.btnXacNhan.Size = new System.Drawing.Size(167, 45);
+            this.btnXacNhan.Size = new System.Drawing.Size(168, 45);
             this.btnXacNhan.TabIndex = 1;
             this.btnXacNhan.Text = "Xác nhận";
             // 
@@ -266,7 +266,7 @@
             this.txtSuaNhom.Font = new System.Drawing.Font("Segoe UI", 10F);
             this.txtSuaNhom.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(68)))), ((int)(((byte)(88)))), ((int)(((byte)(112)))));
             this.txtSuaNhom.ItemHeight = 30;
-            this.txtSuaNhom.Location = new System.Drawing.Point(406, 3);
+            this.txtSuaNhom.Location = new System.Drawing.Point(405, 3);
             this.txtSuaNhom.Name = "txtSuaNhom";
             this.txtSuaNhom.Size = new System.Drawing.Size(143, 36);
             this.txtSuaNhom.TabIndex = 10;

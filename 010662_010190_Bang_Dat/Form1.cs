@@ -27,7 +27,7 @@ namespace _010662_010190_Bang_Dat
                 btnXoa,
                 btnSua,
                 btnTimKiem,
-                btnGop,
+                btnNhom,
                 btnSapXep
             };
 
@@ -92,6 +92,22 @@ namespace _010662_010190_Bang_Dat
 
             ucTimKiemDanhBa ucTimKiem = new ucTimKiemDanhBa();
             addUserControlThaoTac(ucTimKiem);
+        }
+
+        private void btnNhom_Click(object sender, EventArgs e)
+        {
+            HighlightMenu(btnNhom);
+
+            ucNhomDanhBa ucNhom = new ucNhomDanhBa();
+            addUserControlThaoTac(ucNhom);
+        }
+
+        private void btnSapXep_Click(object sender, EventArgs e)
+        {
+            HighlightMenu(btnSapXep);
+
+            ucSapXepDanhBa ucSapXep = new ucSapXepDanhBa();
+            addUserControlThaoTac(ucSapXep);
         }
     }
 }

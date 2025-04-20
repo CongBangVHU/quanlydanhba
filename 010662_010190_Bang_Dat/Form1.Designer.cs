@@ -32,7 +32,7 @@
             this.bthThoat = new Guna.UI2.WinForms.Guna2Button();
             this.btnSapXep = new Guna.UI2.WinForms.Guna2Button();
             this.btnTimKiem = new Guna.UI2.WinForms.Guna2Button();
-            this.btnGop = new Guna.UI2.WinForms.Guna2Button();
+            this.btnNhom = new Guna.UI2.WinForms.Guna2Button();
             this.btnSua = new Guna.UI2.WinForms.Guna2Button();
             this.btnXoa = new Guna.UI2.WinForms.Guna2Button();
             this.guna2HtmlLabel1 = new Guna.UI2.WinForms.Guna2HtmlLabel();
@@ -49,7 +49,7 @@
             this.PanelChucNang.Controls.Add(this.bthThoat);
             this.PanelChucNang.Controls.Add(this.btnSapXep);
             this.PanelChucNang.Controls.Add(this.btnTimKiem);
-            this.PanelChucNang.Controls.Add(this.btnGop);
+            this.PanelChucNang.Controls.Add(this.btnNhom);
             this.PanelChucNang.Controls.Add(this.btnSua);
             this.PanelChucNang.Controls.Add(this.btnXoa);
             this.PanelChucNang.Controls.Add(this.guna2HtmlLabel1);
@@ -103,6 +103,7 @@
             this.btnSapXep.Size = new System.Drawing.Size(216, 45);
             this.btnSapXep.TabIndex = 6;
             this.btnSapXep.Text = "SẮP XẾP DANH BẠ";
+            this.btnSapXep.Click += new System.EventHandler(this.btnSapXep_Click);
             // 
             // btnTimKiem
             // 
@@ -128,28 +129,29 @@
             this.btnTimKiem.Text = "TÌM KIẾM DANH BẠ";
             this.btnTimKiem.Click += new System.EventHandler(this.btnTimKiem_Click);
             // 
-            // btnGop
+            // btnNhom
             // 
-            this.btnGop.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(90)))), ((int)(((byte)(95)))), ((int)(((byte)(106)))));
-            this.btnGop.BorderColor = System.Drawing.Color.White;
-            this.btnGop.BorderRadius = 8;
-            this.btnGop.BorderThickness = 1;
-            this.btnGop.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.btnGop.DisabledState.BorderColor = System.Drawing.Color.DarkGray;
-            this.btnGop.DisabledState.CustomBorderColor = System.Drawing.Color.DarkGray;
-            this.btnGop.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(169)))), ((int)(((byte)(169)))), ((int)(((byte)(169)))));
-            this.btnGop.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(141)))), ((int)(((byte)(141)))), ((int)(((byte)(141)))));
-            this.btnGop.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(90)))), ((int)(((byte)(95)))), ((int)(((byte)(106)))));
-            this.btnGop.Font = new System.Drawing.Font("Times New Roman", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnGop.ForeColor = System.Drawing.Color.White;
-            this.btnGop.HoverState.FillColor = System.Drawing.Color.CornflowerBlue;
-            this.btnGop.HoverState.ForeColor = System.Drawing.Color.White;
-            this.btnGop.Location = new System.Drawing.Point(19, 257);
-            this.btnGop.Name = "btnGop";
-            this.btnGop.PressedColor = System.Drawing.Color.CornflowerBlue;
-            this.btnGop.Size = new System.Drawing.Size(216, 45);
-            this.btnGop.TabIndex = 4;
-            this.btnGop.Text = "GỘP DANH BẠ";
+            this.btnNhom.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(90)))), ((int)(((byte)(95)))), ((int)(((byte)(106)))));
+            this.btnNhom.BorderColor = System.Drawing.Color.White;
+            this.btnNhom.BorderRadius = 8;
+            this.btnNhom.BorderThickness = 1;
+            this.btnNhom.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.btnNhom.DisabledState.BorderColor = System.Drawing.Color.DarkGray;
+            this.btnNhom.DisabledState.CustomBorderColor = System.Drawing.Color.DarkGray;
+            this.btnNhom.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(169)))), ((int)(((byte)(169)))), ((int)(((byte)(169)))));
+            this.btnNhom.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(141)))), ((int)(((byte)(141)))), ((int)(((byte)(141)))));
+            this.btnNhom.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(90)))), ((int)(((byte)(95)))), ((int)(((byte)(106)))));
+            this.btnNhom.Font = new System.Drawing.Font("Times New Roman", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnNhom.ForeColor = System.Drawing.Color.White;
+            this.btnNhom.HoverState.FillColor = System.Drawing.Color.CornflowerBlue;
+            this.btnNhom.HoverState.ForeColor = System.Drawing.Color.White;
+            this.btnNhom.Location = new System.Drawing.Point(19, 257);
+            this.btnNhom.Name = "btnNhom";
+            this.btnNhom.PressedColor = System.Drawing.Color.CornflowerBlue;
+            this.btnNhom.Size = new System.Drawing.Size(216, 45);
+            this.btnNhom.TabIndex = 4;
+            this.btnNhom.Text = "NHÓM DANH BẠ";
+            this.btnNhom.Click += new System.EventHandler(this.btnNhom_Click);
             // 
             // btnSua
             // 
@@ -270,7 +272,7 @@
         private Guna.UI2.WinForms.Guna2Button bthThoat;
         private Guna.UI2.WinForms.Guna2Button btnSapXep;
         private Guna.UI2.WinForms.Guna2Button btnTimKiem;
-        private Guna.UI2.WinForms.Guna2Button btnGop;
+        private Guna.UI2.WinForms.Guna2Button btnNhom;
         private Guna.UI2.WinForms.Guna2Button btnSua;
         private Guna.UI2.WinForms.Guna2Button btnXoa;
         private Guna.UI2.WinForms.Guna2HtmlLabel guna2HtmlLabel1;
