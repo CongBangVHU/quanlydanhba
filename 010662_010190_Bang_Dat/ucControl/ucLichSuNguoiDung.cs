@@ -10,9 +10,9 @@ using System.Windows.Forms;
 
 namespace _010662_010190_Bang_Dat.ucControl
 {
-    public partial class ucSuaDanhBa : UserControl
+    public partial class ucLichSuNguoiDung : UserControl
     {
-        public ucSuaDanhBa()
+        public ucLichSuNguoiDung()
         {
             InitializeComponent();
         }

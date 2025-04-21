@@ -29,15 +29,15 @@
         private void InitializeComponent()
         {
             this.PanelChucNang = new Guna.UI2.WinForms.Guna2Panel();
+            this.btnQuanLy = new Guna.UI2.WinForms.Guna2Button();
             this.bthThoat = new Guna.UI2.WinForms.Guna2Button();
-            this.btnSapXep = new Guna.UI2.WinForms.Guna2Button();
-            this.btnTimKiem = new Guna.UI2.WinForms.Guna2Button();
+            this.btnXem = new Guna.UI2.WinForms.Guna2Button();
+            this.btnLichSu = new Guna.UI2.WinForms.Guna2Button();
             this.btnNhom = new Guna.UI2.WinForms.Guna2Button();
-            this.btnSua = new Guna.UI2.WinForms.Guna2Button();
-            this.btnXoa = new Guna.UI2.WinForms.Guna2Button();
             this.guna2HtmlLabel1 = new Guna.UI2.WinForms.Guna2HtmlLabel();
             this.btnThem = new Guna.UI2.WinForms.Guna2Button();
             this.PanelThaoTac = new Guna.UI2.WinForms.Guna2Panel();
+            this.btnSaoLuu = new Guna.UI2.WinForms.Guna2Button();
             this.PanelChucNang.SuspendLayout();
             this.SuspendLayout();
             // 
@@ -46,18 +46,42 @@
             this.PanelChucNang.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
             | System.Windows.Forms.AnchorStyles.Left)));
             this.PanelChucNang.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(90)))), ((int)(((byte)(95)))), ((int)(((byte)(106)))));
+            this.PanelChucNang.Controls.Add(this.btnSaoLuu);
+            this.PanelChucNang.Controls.Add(this.btnQuanLy);
             this.PanelChucNang.Controls.Add(this.bthThoat);
-            this.PanelChucNang.Controls.Add(this.btnSapXep);
-            this.PanelChucNang.Controls.Add(this.btnTimKiem);
+            this.PanelChucNang.Controls.Add(this.btnXem);
+            this.PanelChucNang.Controls.Add(this.btnLichSu);
             this.PanelChucNang.Controls.Add(this.btnNhom);
-            this.PanelChucNang.Controls.Add(this.btnSua);
-            this.PanelChucNang.Controls.Add(this.btnXoa);
             this.PanelChucNang.Controls.Add(this.guna2HtmlLabel1);
             this.PanelChucNang.Controls.Add(this.btnThem);
             this.PanelChucNang.Location = new System.Drawing.Point(12, 12);
             this.PanelChucNang.Name = "PanelChucNang";
             this.PanelChucNang.Size = new System.Drawing.Size(250, 595);
             this.PanelChucNang.TabIndex = 0;
+            // 
+            // btnQuanLy
+            // 
+            this.btnQuanLy.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(90)))), ((int)(((byte)(95)))), ((int)(((byte)(106)))));
+            this.btnQuanLy.BorderColor = System.Drawing.Color.White;
+            this.btnQuanLy.BorderRadius = 8;
+            this.btnQuanLy.BorderThickness = 1;
+            this.btnQuanLy.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.btnQuanLy.DisabledState.BorderColor = System.Drawing.Color.DarkGray;
+            this.btnQuanLy.DisabledState.CustomBorderColor = System.Drawing.Color.DarkGray;
+            this.btnQuanLy.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(169)))), ((int)(((byte)(169)))), ((int)(((byte)(169)))));
+            this.btnQuanLy.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(141)))), ((int)(((byte)(141)))), ((int)(((byte)(141)))));
+            this.btnQuanLy.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(90)))), ((int)(((byte)(95)))), ((int)(((byte)(106)))));
+            this.btnQuanLy.Font = new System.Drawing.Font("Times New Roman", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnQuanLy.ForeColor = System.Drawing.Color.White;
+            this.btnQuanLy.HoverState.FillColor = System.Drawing.Color.CornflowerBlue;
+            this.btnQuanLy.HoverState.ForeColor = System.Drawing.Color.White;
+            this.btnQuanLy.Location = new System.Drawing.Point(19, 465);
+            this.btnQuanLy.Name = "btnQuanLy";
+            this.btnQuanLy.PressedColor = System.Drawing.Color.CornflowerBlue;
+            this.btnQuanLy.Size = new System.Drawing.Size(216, 51);
+            this.btnQuanLy.TabIndex = 8;
+            this.btnQuanLy.Text = "QUẢN LÝ NGƯỜI DÙNG";
+            this.btnQuanLy.Click += new System.EventHandler(this.btnQuanLy_Click);
             // 
             // bthThoat
             // 
@@ -69,65 +93,65 @@
             this.bthThoat.DisabledState.CustomBorderColor = System.Drawing.Color.DarkGray;
             this.bthThoat.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(169)))), ((int)(((byte)(169)))), ((int)(((byte)(169)))));
             this.bthThoat.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(141)))), ((int)(((byte)(141)))), ((int)(((byte)(141)))));
-            this.bthThoat.FillColor = System.Drawing.Color.Tomato;
+            this.bthThoat.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(220)))), ((int)(((byte)(53)))), ((int)(((byte)(69)))));
             this.bthThoat.Font = new System.Drawing.Font("Times New Roman", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.bthThoat.ForeColor = System.Drawing.Color.White;
             this.bthThoat.HoverState.FillColor = System.Drawing.Color.Red;
             this.bthThoat.HoverState.ForeColor = System.Drawing.Color.White;
-            this.bthThoat.Location = new System.Drawing.Point(19, 523);
+            this.bthThoat.Location = new System.Drawing.Point(19, 537);
             this.bthThoat.Name = "bthThoat";
             this.bthThoat.PressedColor = System.Drawing.Color.CornflowerBlue;
-            this.bthThoat.Size = new System.Drawing.Size(216, 60);
+            this.bthThoat.Size = new System.Drawing.Size(216, 46);
             this.bthThoat.TabIndex = 7;
             this.bthThoat.Text = "THOÁT";
             // 
-            // btnSapXep
+            // btnXem
             // 
-            this.btnSapXep.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(90)))), ((int)(((byte)(95)))), ((int)(((byte)(106)))));
-            this.btnSapXep.BorderColor = System.Drawing.Color.White;
-            this.btnSapXep.BorderRadius = 8;
-            this.btnSapXep.BorderThickness = 1;
-            this.btnSapXep.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.btnSapXep.DisabledState.BorderColor = System.Drawing.Color.DarkGray;
-            this.btnSapXep.DisabledState.CustomBorderColor = System.Drawing.Color.DarkGray;
-            this.btnSapXep.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(169)))), ((int)(((byte)(169)))), ((int)(((byte)(169)))));
-            this.btnSapXep.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(141)))), ((int)(((byte)(141)))), ((int)(((byte)(141)))));
-            this.btnSapXep.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(90)))), ((int)(((byte)(95)))), ((int)(((byte)(106)))));
-            this.btnSapXep.Font = new System.Drawing.Font("Times New Roman", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnSapXep.ForeColor = System.Drawing.Color.White;
-            this.btnSapXep.HoverState.FillColor = System.Drawing.Color.CornflowerBlue;
-            this.btnSapXep.HoverState.ForeColor = System.Drawing.Color.White;
-            this.btnSapXep.Location = new System.Drawing.Point(19, 385);
-            this.btnSapXep.Name = "btnSapXep";
-            this.btnSapXep.PressedColor = System.Drawing.Color.CornflowerBlue;
-            this.btnSapXep.Size = new System.Drawing.Size(216, 45);
-            this.btnSapXep.TabIndex = 6;
-            this.btnSapXep.Text = "SẮP XẾP DANH BẠ";
-            this.btnSapXep.Click += new System.EventHandler(this.btnSapXep_Click);
+            this.btnXem.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(90)))), ((int)(((byte)(95)))), ((int)(((byte)(106)))));
+            this.btnXem.BorderColor = System.Drawing.Color.White;
+            this.btnXem.BorderRadius = 8;
+            this.btnXem.BorderThickness = 1;
+            this.btnXem.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.btnXem.DisabledState.BorderColor = System.Drawing.Color.DarkGray;
+            this.btnXem.DisabledState.CustomBorderColor = System.Drawing.Color.DarkGray;
+            this.btnXem.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(169)))), ((int)(((byte)(169)))), ((int)(((byte)(169)))));
+            this.btnXem.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(141)))), ((int)(((byte)(141)))), ((int)(((byte)(141)))));
+            this.btnXem.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(90)))), ((int)(((byte)(95)))), ((int)(((byte)(106)))));
+            this.btnXem.Font = new System.Drawing.Font("Times New Roman", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnXem.ForeColor = System.Drawing.Color.White;
+            this.btnXem.HoverState.FillColor = System.Drawing.Color.CornflowerBlue;
+            this.btnXem.HoverState.ForeColor = System.Drawing.Color.White;
+            this.btnXem.Location = new System.Drawing.Point(19, 208);
+            this.btnXem.Name = "btnXem";
+            this.btnXem.PressedColor = System.Drawing.Color.CornflowerBlue;
+            this.btnXem.Size = new System.Drawing.Size(216, 45);
+            this.btnXem.TabIndex = 6;
+            this.btnXem.Text = "XEM DANH BẠ";
+            this.btnXem.Click += new System.EventHandler(this.btnXem_Click);
             // 
-            // btnTimKiem
+            // btnLichSu
             // 
-            this.btnTimKiem.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(90)))), ((int)(((byte)(95)))), ((int)(((byte)(106)))));
-            this.btnTimKiem.BorderColor = System.Drawing.Color.White;
-            this.btnTimKiem.BorderRadius = 8;
-            this.btnTimKiem.BorderThickness = 1;
-            this.btnTimKiem.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.btnTimKiem.DisabledState.BorderColor = System.Drawing.Color.DarkGray;
-            this.btnTimKiem.DisabledState.CustomBorderColor = System.Drawing.Color.DarkGray;
-            this.btnTimKiem.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(169)))), ((int)(((byte)(169)))), ((int)(((byte)(169)))));
-            this.btnTimKiem.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(141)))), ((int)(((byte)(141)))), ((int)(((byte)(141)))));
-            this.btnTimKiem.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(90)))), ((int)(((byte)(95)))), ((int)(((byte)(106)))));
-            this.btnTimKiem.Font = new System.Drawing.Font("Times New Roman", 10.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnTimKiem.ForeColor = System.Drawing.Color.White;
-            this.btnTimKiem.HoverState.FillColor = System.Drawing.Color.CornflowerBlue;
-            this.btnTimKiem.HoverState.ForeColor = System.Drawing.Color.White;
-            this.btnTimKiem.Location = new System.Drawing.Point(19, 321);
-            this.btnTimKiem.Name = "btnTimKiem";
-            this.btnTimKiem.PressedColor = System.Drawing.Color.CornflowerBlue;
-            this.btnTimKiem.Size = new System.Drawing.Size(216, 45);
-            this.btnTimKiem.TabIndex = 5;
-            this.btnTimKiem.Text = "TÌM KIẾM DANH BẠ";
-            this.btnTimKiem.Click += new System.EventHandler(this.btnTimKiem_Click);
+            this.btnLichSu.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(90)))), ((int)(((byte)(95)))), ((int)(((byte)(106)))));
+            this.btnLichSu.BorderColor = System.Drawing.Color.White;
+            this.btnLichSu.BorderRadius = 8;
+            this.btnLichSu.BorderThickness = 1;
+            this.btnLichSu.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.btnLichSu.DisabledState.BorderColor = System.Drawing.Color.DarkGray;
+            this.btnLichSu.DisabledState.CustomBorderColor = System.Drawing.Color.DarkGray;
+            this.btnLichSu.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(169)))), ((int)(((byte)(169)))), ((int)(((byte)(169)))));
+            this.btnLichSu.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(141)))), ((int)(((byte)(141)))), ((int)(((byte)(141)))));
+            this.btnLichSu.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(90)))), ((int)(((byte)(95)))), ((int)(((byte)(106)))));
+            this.btnLichSu.Font = new System.Drawing.Font("Times New Roman", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnLichSu.ForeColor = System.Drawing.Color.White;
+            this.btnLichSu.HoverState.FillColor = System.Drawing.Color.CornflowerBlue;
+            this.btnLichSu.HoverState.ForeColor = System.Drawing.Color.White;
+            this.btnLichSu.Location = new System.Drawing.Point(19, 273);
+            this.btnLichSu.Name = "btnLichSu";
+            this.btnLichSu.PressedColor = System.Drawing.Color.CornflowerBlue;
+            this.btnLichSu.Size = new System.Drawing.Size(216, 58);
+            this.btnLichSu.TabIndex = 5;
+            this.btnLichSu.Text = "LỊCH SỬ NGƯỜI DÙNG";
+            this.btnLichSu.Click += new System.EventHandler(this.btnLichSu_Click);
             // 
             // btnNhom
             // 
@@ -145,61 +169,13 @@
             this.btnNhom.ForeColor = System.Drawing.Color.White;
             this.btnNhom.HoverState.FillColor = System.Drawing.Color.CornflowerBlue;
             this.btnNhom.HoverState.ForeColor = System.Drawing.Color.White;
-            this.btnNhom.Location = new System.Drawing.Point(19, 257);
+            this.btnNhom.Location = new System.Drawing.Point(19, 141);
             this.btnNhom.Name = "btnNhom";
             this.btnNhom.PressedColor = System.Drawing.Color.CornflowerBlue;
             this.btnNhom.Size = new System.Drawing.Size(216, 45);
             this.btnNhom.TabIndex = 4;
             this.btnNhom.Text = "NHÓM DANH BẠ";
             this.btnNhom.Click += new System.EventHandler(this.btnNhom_Click);
-            // 
-            // btnSua
-            // 
-            this.btnSua.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(90)))), ((int)(((byte)(95)))), ((int)(((byte)(106)))));
-            this.btnSua.BorderColor = System.Drawing.Color.White;
-            this.btnSua.BorderRadius = 8;
-            this.btnSua.BorderThickness = 1;
-            this.btnSua.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.btnSua.DisabledState.BorderColor = System.Drawing.Color.DarkGray;
-            this.btnSua.DisabledState.CustomBorderColor = System.Drawing.Color.DarkGray;
-            this.btnSua.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(169)))), ((int)(((byte)(169)))), ((int)(((byte)(169)))));
-            this.btnSua.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(141)))), ((int)(((byte)(141)))), ((int)(((byte)(141)))));
-            this.btnSua.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(90)))), ((int)(((byte)(95)))), ((int)(((byte)(106)))));
-            this.btnSua.Font = new System.Drawing.Font("Times New Roman", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnSua.ForeColor = System.Drawing.Color.White;
-            this.btnSua.HoverState.FillColor = System.Drawing.Color.CornflowerBlue;
-            this.btnSua.HoverState.ForeColor = System.Drawing.Color.White;
-            this.btnSua.Location = new System.Drawing.Point(19, 195);
-            this.btnSua.Name = "btnSua";
-            this.btnSua.PressedColor = System.Drawing.Color.CornflowerBlue;
-            this.btnSua.Size = new System.Drawing.Size(216, 45);
-            this.btnSua.TabIndex = 3;
-            this.btnSua.Text = "SỬA DANH BẠ";
-            this.btnSua.Click += new System.EventHandler(this.btnSua_Click);
-            // 
-            // btnXoa
-            // 
-            this.btnXoa.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(90)))), ((int)(((byte)(95)))), ((int)(((byte)(106)))));
-            this.btnXoa.BorderColor = System.Drawing.Color.White;
-            this.btnXoa.BorderRadius = 8;
-            this.btnXoa.BorderThickness = 1;
-            this.btnXoa.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.btnXoa.DisabledState.BorderColor = System.Drawing.Color.DarkGray;
-            this.btnXoa.DisabledState.CustomBorderColor = System.Drawing.Color.DarkGray;
-            this.btnXoa.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(169)))), ((int)(((byte)(169)))), ((int)(((byte)(169)))));
-            this.btnXoa.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(141)))), ((int)(((byte)(141)))), ((int)(((byte)(141)))));
-            this.btnXoa.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(90)))), ((int)(((byte)(95)))), ((int)(((byte)(106)))));
-            this.btnXoa.Font = new System.Drawing.Font("Times New Roman", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnXoa.ForeColor = System.Drawing.Color.White;
-            this.btnXoa.HoverState.FillColor = System.Drawing.Color.CornflowerBlue;
-            this.btnXoa.HoverState.ForeColor = System.Drawing.Color.White;
-            this.btnXoa.Location = new System.Drawing.Point(19, 133);
-            this.btnXoa.Name = "btnXoa";
-            this.btnXoa.PressedColor = System.Drawing.Color.CornflowerBlue;
-            this.btnXoa.Size = new System.Drawing.Size(216, 45);
-            this.btnXoa.TabIndex = 2;
-            this.btnXoa.Text = "XÓA DANH BẠ";
-            this.btnXoa.Click += new System.EventHandler(this.btnXoa_Click);
             // 
             // guna2HtmlLabel1
             // 
@@ -246,6 +222,30 @@
             this.PanelThaoTac.Size = new System.Drawing.Size(820, 596);
             this.PanelThaoTac.TabIndex = 2;
             // 
+            // btnSaoLuu
+            // 
+            this.btnSaoLuu.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(90)))), ((int)(((byte)(95)))), ((int)(((byte)(106)))));
+            this.btnSaoLuu.BorderColor = System.Drawing.Color.White;
+            this.btnSaoLuu.BorderRadius = 8;
+            this.btnSaoLuu.BorderThickness = 1;
+            this.btnSaoLuu.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.btnSaoLuu.DisabledState.BorderColor = System.Drawing.Color.DarkGray;
+            this.btnSaoLuu.DisabledState.CustomBorderColor = System.Drawing.Color.DarkGray;
+            this.btnSaoLuu.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(169)))), ((int)(((byte)(169)))), ((int)(((byte)(169)))));
+            this.btnSaoLuu.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(141)))), ((int)(((byte)(141)))), ((int)(((byte)(141)))));
+            this.btnSaoLuu.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(90)))), ((int)(((byte)(95)))), ((int)(((byte)(106)))));
+            this.btnSaoLuu.Font = new System.Drawing.Font("Times New Roman", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnSaoLuu.ForeColor = System.Drawing.Color.White;
+            this.btnSaoLuu.HoverState.FillColor = System.Drawing.Color.CornflowerBlue;
+            this.btnSaoLuu.HoverState.ForeColor = System.Drawing.Color.White;
+            this.btnSaoLuu.Location = new System.Drawing.Point(19, 350);
+            this.btnSaoLuu.Name = "btnSaoLuu";
+            this.btnSaoLuu.PressedColor = System.Drawing.Color.CornflowerBlue;
+            this.btnSaoLuu.Size = new System.Drawing.Size(216, 45);
+            this.btnSaoLuu.TabIndex = 9;
+            this.btnSaoLuu.Text = "SAO LƯU DANH BẠ";
+            this.btnSaoLuu.Click += new System.EventHandler(this.btnSaoLuu_Click);
+            // 
             // formMain
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(11F, 22F);
@@ -270,12 +270,12 @@
         private Guna.UI2.WinForms.Guna2Panel PanelThaoTac;
         private Guna.UI2.WinForms.Guna2Button btnThem;
         private Guna.UI2.WinForms.Guna2Button bthThoat;
-        private Guna.UI2.WinForms.Guna2Button btnSapXep;
-        private Guna.UI2.WinForms.Guna2Button btnTimKiem;
+        private Guna.UI2.WinForms.Guna2Button btnXem;
+        private Guna.UI2.WinForms.Guna2Button btnLichSu;
         private Guna.UI2.WinForms.Guna2Button btnNhom;
-        private Guna.UI2.WinForms.Guna2Button btnSua;
-        private Guna.UI2.WinForms.Guna2Button btnXoa;
         private Guna.UI2.WinForms.Guna2HtmlLabel guna2HtmlLabel1;
+        private Guna.UI2.WinForms.Guna2Button btnQuanLy;
+        private Guna.UI2.WinForms.Guna2Button btnSaoLuu;
     }
 }
 

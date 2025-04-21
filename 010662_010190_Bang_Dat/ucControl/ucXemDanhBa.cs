@@ -10,9 +10,9 @@ using System.Windows.Forms;
 
 namespace _010662_010190_Bang_Dat.ucControl
 {
-    public partial class ucSapXepDanhBa : UserControl
+    public partial class ucXemDanhBa : UserControl
     {
-        public ucSapXepDanhBa()
+        public ucXemDanhBa()
         {
             InitializeComponent();
         }
