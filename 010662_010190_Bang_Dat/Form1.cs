@@ -30,8 +30,10 @@ namespace _010662_010190_Bang_Dat
                 btnNhom,
                 btnSapXep
             };
-
-
+            using (SqlConnection conn = SqlConnectionManager.GetConnection())
+            {
+                conn.Open();
+            }
         }
 
         private void formMain_Load(object sender, EventArgs e)
