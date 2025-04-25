@@ -29,6 +29,7 @@
         private void InitializeComponent()
         {
             this.PanelChucNang = new Guna.UI2.WinForms.Guna2Panel();
+            this.btnSaoLuu = new Guna.UI2.WinForms.Guna2Button();
             this.btnQuanLy = new Guna.UI2.WinForms.Guna2Button();
             this.bthThoat = new Guna.UI2.WinForms.Guna2Button();
             this.btnXem = new Guna.UI2.WinForms.Guna2Button();
@@ -37,14 +38,11 @@
             this.guna2HtmlLabel1 = new Guna.UI2.WinForms.Guna2HtmlLabel();
             this.btnThem = new Guna.UI2.WinForms.Guna2Button();
             this.PanelThaoTac = new Guna.UI2.WinForms.Guna2Panel();
-            this.btnSaoLuu = new Guna.UI2.WinForms.Guna2Button();
             this.PanelChucNang.SuspendLayout();
             this.SuspendLayout();
             // 
             // PanelChucNang
             // 
-            this.PanelChucNang.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
-            | System.Windows.Forms.AnchorStyles.Left)));
             this.PanelChucNang.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(90)))), ((int)(((byte)(95)))), ((int)(((byte)(106)))));
             this.PanelChucNang.Controls.Add(this.btnSaoLuu);
             this.PanelChucNang.Controls.Add(this.btnQuanLy);
@@ -58,6 +56,30 @@
             this.PanelChucNang.Name = "PanelChucNang";
             this.PanelChucNang.Size = new System.Drawing.Size(250, 595);
             this.PanelChucNang.TabIndex = 0;
+            // 
+            // btnSaoLuu
+            // 
+            this.btnSaoLuu.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(90)))), ((int)(((byte)(95)))), ((int)(((byte)(106)))));
+            this.btnSaoLuu.BorderColor = System.Drawing.Color.White;
+            this.btnSaoLuu.BorderRadius = 8;
+            this.btnSaoLuu.BorderThickness = 1;
+            this.btnSaoLuu.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.btnSaoLuu.DisabledState.BorderColor = System.Drawing.Color.DarkGray;
+            this.btnSaoLuu.DisabledState.CustomBorderColor = System.Drawing.Color.DarkGray;
+            this.btnSaoLuu.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(169)))), ((int)(((byte)(169)))), ((int)(((byte)(169)))));
+            this.btnSaoLuu.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(141)))), ((int)(((byte)(141)))), ((int)(((byte)(141)))));
+            this.btnSaoLuu.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(90)))), ((int)(((byte)(95)))), ((int)(((byte)(106)))));
+            this.btnSaoLuu.Font = new System.Drawing.Font("Times New Roman", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnSaoLuu.ForeColor = System.Drawing.Color.White;
+            this.btnSaoLuu.HoverState.FillColor = System.Drawing.Color.CornflowerBlue;
+            this.btnSaoLuu.HoverState.ForeColor = System.Drawing.Color.White;
+            this.btnSaoLuu.Location = new System.Drawing.Point(19, 350);
+            this.btnSaoLuu.Name = "btnSaoLuu";
+            this.btnSaoLuu.PressedColor = System.Drawing.Color.CornflowerBlue;
+            this.btnSaoLuu.Size = new System.Drawing.Size(216, 45);
+            this.btnSaoLuu.TabIndex = 9;
+            this.btnSaoLuu.Text = "SAO LƯU DANH BẠ";
+            this.btnSaoLuu.Click += new System.EventHandler(this.btnSaoLuu_Click);
             // 
             // btnQuanLy
             // 
@@ -104,6 +126,7 @@
             this.bthThoat.Size = new System.Drawing.Size(216, 46);
             this.bthThoat.TabIndex = 7;
             this.bthThoat.Text = "THOÁT";
+            this.bthThoat.Click += new System.EventHandler(this.bthThoat_Click);
             // 
             // btnXem
             // 
@@ -214,37 +237,11 @@
             // 
             // PanelThaoTac
             // 
-            this.PanelThaoTac.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
-            | System.Windows.Forms.AnchorStyles.Right)));
             this.PanelThaoTac.BackColor = System.Drawing.Color.White;
             this.PanelThaoTac.Location = new System.Drawing.Point(268, 12);
             this.PanelThaoTac.Name = "PanelThaoTac";
             this.PanelThaoTac.Size = new System.Drawing.Size(820, 596);
             this.PanelThaoTac.TabIndex = 2;
-            // 
-            // btnSaoLuu
-            // 
-            this.btnSaoLuu.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(90)))), ((int)(((byte)(95)))), ((int)(((byte)(106)))));
-            this.btnSaoLuu.BorderColor = System.Drawing.Color.White;
-            this.btnSaoLuu.BorderRadius = 8;
-            this.btnSaoLuu.BorderThickness = 1;
-            this.btnSaoLuu.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.btnSaoLuu.DisabledState.BorderColor = System.Drawing.Color.DarkGray;
-            this.btnSaoLuu.DisabledState.CustomBorderColor = System.Drawing.Color.DarkGray;
-            this.btnSaoLuu.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(169)))), ((int)(((byte)(169)))), ((int)(((byte)(169)))));
-            this.btnSaoLuu.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(141)))), ((int)(((byte)(141)))), ((int)(((byte)(141)))));
-            this.btnSaoLuu.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(90)))), ((int)(((byte)(95)))), ((int)(((byte)(106)))));
-            this.btnSaoLuu.Font = new System.Drawing.Font("Times New Roman", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnSaoLuu.ForeColor = System.Drawing.Color.White;
-            this.btnSaoLuu.HoverState.FillColor = System.Drawing.Color.CornflowerBlue;
-            this.btnSaoLuu.HoverState.ForeColor = System.Drawing.Color.White;
-            this.btnSaoLuu.Location = new System.Drawing.Point(19, 350);
-            this.btnSaoLuu.Name = "btnSaoLuu";
-            this.btnSaoLuu.PressedColor = System.Drawing.Color.CornflowerBlue;
-            this.btnSaoLuu.Size = new System.Drawing.Size(216, 45);
-            this.btnSaoLuu.TabIndex = 9;
-            this.btnSaoLuu.Text = "SAO LƯU DANH BẠ";
-            this.btnSaoLuu.Click += new System.EventHandler(this.btnSaoLuu_Click);
             // 
             // formMain
             // 
