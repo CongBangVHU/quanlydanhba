@@ -11,7 +11,7 @@ namespace _010662_010190_Bang_Dat.ConnectSql
     {
         public static class SqlConnectionManager
         {
-            private static readonly string connectionString = "Data Source=LAPTOP-CONGBANG\\SQLEXPRESS;Initial Catalog=QuanLyDanhBa;Integrated Security=True";
+            private static readonly string connectionString = "Data Source=.\\SQLEXPRESS;Initial Catalog=QuanLyDanhBa;Integrated Security=True";
 
             public static SqlConnection GetConnection()
             {
