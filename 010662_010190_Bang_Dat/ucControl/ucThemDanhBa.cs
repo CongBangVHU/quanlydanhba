@@ -48,7 +48,7 @@ namespace _010662_010190_Bang_Dat.ucControl
             finally
             {
                 if (conn.State == ConnectionState.Open)
-                    conn.Close();
+                    conn.Close(); 
             }
         }
         void LoadCbNhom()
