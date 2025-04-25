@@ -34,7 +34,7 @@
             this.label6 = new System.Windows.Forms.Label();
             this.label4 = new System.Windows.Forms.Label();
             this.labEmail = new System.Windows.Forms.Label();
-            this.txtNhom = new Guna.UI2.WinForms.Guna2ComboBox();
+            this.cbNhom = new Guna.UI2.WinForms.Guna2ComboBox();
             this.txtHoTen = new Guna.UI2.WinForms.Guna2TextBox();
             this.labHoTen = new System.Windows.Forms.Label();
             this.txtDiaChi = new Guna.UI2.WinForms.Guna2TextBox();
@@ -78,13 +78,13 @@
             this.tableLayoutPanel2.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 71F));
             this.tableLayoutPanel2.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 149F));
             this.tableLayoutPanel2.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 92F));
-            this.tableLayoutPanel2.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 185F));
+            this.tableLayoutPanel2.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 187F));
             this.tableLayoutPanel2.Controls.Add(this.txtGhiChu, 5, 0);
             this.tableLayoutPanel2.Controls.Add(this.txtEmail, 1, 0);
             this.tableLayoutPanel2.Controls.Add(this.label6, 4, 0);
             this.tableLayoutPanel2.Controls.Add(this.label4, 2, 0);
             this.tableLayoutPanel2.Controls.Add(this.labEmail, 0, 0);
-            this.tableLayoutPanel2.Controls.Add(this.txtNhom, 3, 0);
+            this.tableLayoutPanel2.Controls.Add(this.cbNhom, 3, 0);
             this.tableLayoutPanel2.Location = new System.Drawing.Point(3, 113);
             this.tableLayoutPanel2.Name = "tableLayoutPanel2";
             this.tableLayoutPanel2.RowCount = 1;
@@ -109,12 +109,12 @@
             this.txtGhiChu.FocusedState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
             this.txtGhiChu.Font = new System.Drawing.Font("Segoe UI", 9F);
             this.txtGhiChu.HoverState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
-            this.txtGhiChu.Location = new System.Drawing.Point(634, 4);
+            this.txtGhiChu.Location = new System.Drawing.Point(632, 4);
             this.txtGhiChu.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.txtGhiChu.Name = "txtGhiChu";
             this.txtGhiChu.PlaceholderText = "";
             this.txtGhiChu.SelectedText = "";
-            this.txtGhiChu.Size = new System.Drawing.Size(180, 49);
+            this.txtGhiChu.Size = new System.Drawing.Size(182, 49);
             this.txtGhiChu.TabIndex = 9;
             // 
             // txtEmail
@@ -129,12 +129,12 @@
             this.txtEmail.FocusedState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
             this.txtEmail.Font = new System.Drawing.Font("Segoe UI", 9F);
             this.txtEmail.HoverState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
-            this.txtEmail.Location = new System.Drawing.Point(90, 4);
+            this.txtEmail.Location = new System.Drawing.Point(89, 4);
             this.txtEmail.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.txtEmail.Name = "txtEmail";
             this.txtEmail.PlaceholderText = "";
             this.txtEmail.SelectedText = "";
-            this.txtEmail.Size = new System.Drawing.Size(226, 49);
+            this.txtEmail.Size = new System.Drawing.Size(225, 49);
             this.txtEmail.TabIndex = 7;
             // 
             // label6
@@ -142,7 +142,7 @@
             this.label6.AutoSize = true;
             this.label6.Dock = System.Windows.Forms.DockStyle.Fill;
             this.label6.Font = new System.Drawing.Font("Times New Roman", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label6.Location = new System.Drawing.Point(542, 0);
+            this.label6.Location = new System.Drawing.Point(540, 0);
             this.label6.Name = "label6";
             this.label6.Size = new System.Drawing.Size(86, 57);
             this.label6.TabIndex = 6;
@@ -154,7 +154,7 @@
             this.label4.AutoSize = true;
             this.label4.Dock = System.Windows.Forms.DockStyle.Fill;
             this.label4.Font = new System.Drawing.Font("Times New Roman", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label4.Location = new System.Drawing.Point(322, 0);
+            this.label4.Location = new System.Drawing.Point(320, 0);
             this.label4.Name = "label4";
             this.label4.Size = new System.Drawing.Size(65, 57);
             this.label4.TabIndex = 4;
@@ -168,25 +168,25 @@
             this.labEmail.Font = new System.Drawing.Font("Times New Roman", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.labEmail.Location = new System.Drawing.Point(3, 0);
             this.labEmail.Name = "labEmail";
-            this.labEmail.Size = new System.Drawing.Size(81, 57);
+            this.labEmail.Size = new System.Drawing.Size(80, 57);
             this.labEmail.TabIndex = 2;
             this.labEmail.Text = "Email";
             this.labEmail.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             // 
-            // txtNhom
+            // cbNhom
             // 
-            this.txtNhom.BackColor = System.Drawing.Color.Transparent;
-            this.txtNhom.DrawMode = System.Windows.Forms.DrawMode.OwnerDrawFixed;
-            this.txtNhom.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
-            this.txtNhom.FocusedColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
-            this.txtNhom.FocusedState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
-            this.txtNhom.Font = new System.Drawing.Font("Segoe UI", 10F);
-            this.txtNhom.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(68)))), ((int)(((byte)(88)))), ((int)(((byte)(112)))));
-            this.txtNhom.ItemHeight = 30;
-            this.txtNhom.Location = new System.Drawing.Point(393, 3);
-            this.txtNhom.Name = "txtNhom";
-            this.txtNhom.Size = new System.Drawing.Size(140, 36);
-            this.txtNhom.TabIndex = 10;
+            this.cbNhom.BackColor = System.Drawing.Color.Transparent;
+            this.cbNhom.DrawMode = System.Windows.Forms.DrawMode.OwnerDrawFixed;
+            this.cbNhom.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
+            this.cbNhom.FocusedColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
+            this.cbNhom.FocusedState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
+            this.cbNhom.Font = new System.Drawing.Font("Segoe UI", 10F);
+            this.cbNhom.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(68)))), ((int)(((byte)(88)))), ((int)(((byte)(112)))));
+            this.cbNhom.ItemHeight = 30;
+            this.cbNhom.Location = new System.Drawing.Point(391, 3);
+            this.cbNhom.Name = "cbNhom";
+            this.cbNhom.Size = new System.Drawing.Size(140, 36);
+            this.cbNhom.TabIndex = 10;
             // 
             // txtHoTen
             // 
@@ -200,12 +200,12 @@
             this.txtHoTen.FocusedState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
             this.txtHoTen.Font = new System.Drawing.Font("Segoe UI", 9F);
             this.txtHoTen.HoverState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
-            this.txtHoTen.Location = new System.Drawing.Point(89, 4);
+            this.txtHoTen.Location = new System.Drawing.Point(88, 4);
             this.txtHoTen.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.txtHoTen.Name = "txtHoTen";
             this.txtHoTen.PlaceholderText = "";
             this.txtHoTen.SelectedText = "";
-            this.txtHoTen.Size = new System.Drawing.Size(302, 45);
+            this.txtHoTen.Size = new System.Drawing.Size(301, 45);
             this.txtHoTen.TabIndex = 1;
             // 
             // labHoTen
@@ -215,7 +215,7 @@
             this.labHoTen.Font = new System.Drawing.Font("Times New Roman", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.labHoTen.Location = new System.Drawing.Point(3, 0);
             this.labHoTen.Name = "labHoTen";
-            this.labHoTen.Size = new System.Drawing.Size(80, 53);
+            this.labHoTen.Size = new System.Drawing.Size(79, 53);
             this.labHoTen.TabIndex = 0;
             this.labHoTen.Text = "Họ tên";
             this.labHoTen.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
@@ -232,12 +232,12 @@
             this.txtDiaChi.FocusedState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
             this.txtDiaChi.Font = new System.Drawing.Font("Segoe UI", 9F);
             this.txtDiaChi.HoverState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
-            this.txtDiaChi.Location = new System.Drawing.Point(89, 57);
+            this.txtDiaChi.Location = new System.Drawing.Point(88, 57);
             this.txtDiaChi.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.txtDiaChi.Name = "txtDiaChi";
             this.txtDiaChi.PlaceholderText = "";
             this.txtDiaChi.SelectedText = "";
-            this.txtDiaChi.Size = new System.Drawing.Size(302, 46);
+            this.txtDiaChi.Size = new System.Drawing.Size(301, 46);
             this.txtDiaChi.TabIndex = 3;
             // 
             // tableLayoutPanel1
@@ -248,7 +248,7 @@
             this.tableLayoutPanel1.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 21.84211F));
             this.tableLayoutPanel1.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 78.1579F));
             this.tableLayoutPanel1.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 100F));
-            this.tableLayoutPanel1.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 319F));
+            this.tableLayoutPanel1.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 321F));
             this.tableLayoutPanel1.Controls.Add(this.label5, 2, 1);
             this.tableLayoutPanel1.Controls.Add(this.txtSDT, 3, 0);
             this.tableLayoutPanel1.Controls.Add(this.label3, 2, 0);
@@ -270,7 +270,7 @@
             this.label5.AutoSize = true;
             this.label5.Dock = System.Windows.Forms.DockStyle.Fill;
             this.label5.Font = new System.Drawing.Font("Times New Roman", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label5.Location = new System.Drawing.Point(397, 53);
+            this.label5.Location = new System.Drawing.Point(395, 53);
             this.label5.Name = "label5";
             this.label5.Size = new System.Drawing.Size(94, 54);
             this.label5.TabIndex = 7;
@@ -289,12 +289,12 @@
             this.txtSDT.FocusedState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
             this.txtSDT.Font = new System.Drawing.Font("Segoe UI", 9F);
             this.txtSDT.HoverState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
-            this.txtSDT.Location = new System.Drawing.Point(497, 4);
+            this.txtSDT.Location = new System.Drawing.Point(495, 4);
             this.txtSDT.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.txtSDT.Name = "txtSDT";
             this.txtSDT.PlaceholderText = "";
             this.txtSDT.SelectedText = "";
-            this.txtSDT.Size = new System.Drawing.Size(314, 45);
+            this.txtSDT.Size = new System.Drawing.Size(316, 45);
             this.txtSDT.TabIndex = 6;
             // 
             // label3
@@ -302,7 +302,7 @@
             this.label3.AutoSize = true;
             this.label3.Dock = System.Windows.Forms.DockStyle.Fill;
             this.label3.Font = new System.Drawing.Font("Times New Roman", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label3.Location = new System.Drawing.Point(397, 0);
+            this.label3.Location = new System.Drawing.Point(395, 0);
             this.label3.Name = "label3";
             this.label3.Size = new System.Drawing.Size(94, 53);
             this.label3.TabIndex = 5;
@@ -316,7 +316,7 @@
             this.labDiaChi.Font = new System.Drawing.Font("Times New Roman", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.labDiaChi.Location = new System.Drawing.Point(3, 53);
             this.labDiaChi.Name = "labDiaChi";
-            this.labDiaChi.Size = new System.Drawing.Size(80, 54);
+            this.labDiaChi.Size = new System.Drawing.Size(79, 54);
             this.labDiaChi.TabIndex = 4;
             this.labDiaChi.Text = "Địa chỉ";
             this.labDiaChi.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
@@ -328,11 +328,11 @@
             this.dtpNgaySinh.FillColor = System.Drawing.Color.White;
             this.dtpNgaySinh.Font = new System.Drawing.Font("Segoe UI", 9F);
             this.dtpNgaySinh.Format = System.Windows.Forms.DateTimePickerFormat.Long;
-            this.dtpNgaySinh.Location = new System.Drawing.Point(497, 56);
+            this.dtpNgaySinh.Location = new System.Drawing.Point(495, 56);
             this.dtpNgaySinh.MaxDate = new System.DateTime(9998, 12, 31, 0, 0, 0, 0);
             this.dtpNgaySinh.MinDate = new System.DateTime(1753, 1, 1, 0, 0, 0, 0);
             this.dtpNgaySinh.Name = "dtpNgaySinh";
-            this.dtpNgaySinh.Size = new System.Drawing.Size(314, 48);
+            this.dtpNgaySinh.Size = new System.Drawing.Size(316, 48);
             this.dtpNgaySinh.TabIndex = 8;
             this.dtpNgaySinh.Value = new System.DateTime(2025, 4, 21, 21, 48, 13, 972);
             // 
@@ -410,6 +410,7 @@
             this.btnSua.Size = new System.Drawing.Size(96, 44);
             this.btnSua.TabIndex = 30;
             this.btnSua.Text = "Sửa";
+            this.btnSua.Click += new System.EventHandler(this.btnSua_Click);
             // 
             // btnXoa
             // 
@@ -609,7 +610,7 @@
         private System.Windows.Forms.Label label6;
         private System.Windows.Forms.Label label4;
         private System.Windows.Forms.Label labEmail;
-        private Guna.UI2.WinForms.Guna2ComboBox txtNhom;
+        private Guna.UI2.WinForms.Guna2ComboBox cbNhom;
         private System.Windows.Forms.Button button1;
         private System.Windows.Forms.Label label5;
         private Guna.UI2.WinForms.Guna2TextBox txtSDT;

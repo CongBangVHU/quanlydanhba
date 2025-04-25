@@ -23,11 +23,6 @@ namespace _010662_010190_Bang_Dat.ucControl
             InitializeComponent();
             conn = SqlConnectionManager.GetConnection();
 
-            this.Load += new System.EventHandler(this.ucXemDanhBa_Load);
-            this.Leave += new System.EventHandler(this.ucXemDanhBa_Leave);
-
-            txtTimKiem.KeyDown += txtTimKiem_KeyDown;
-
             cbSapXep.Items.Add("Mã liên hệ");
             cbSapXep.Items.Add("A - Z");
             cbSapXep.Items.Add("Họ tên");
@@ -54,7 +49,7 @@ namespace _010662_010190_Bang_Dat.ucControl
             {
                 if (conn.State == ConnectionState.Closed)
                     conn.Open();
-                    LoadDuLieu();
+                LoadDuLieu();
             }
             catch (Exception ex)
             {
@@ -66,19 +61,6 @@ namespace _010662_010190_Bang_Dat.ucControl
             if (conn.State == ConnectionState.Open)
                 conn.Close();
         }
-
-        private void cbSapXep_SelectedIndexChanged(object sender, EventArgs e)
-        {
-            
-            
-        }
-
-        private void cbThuTu_SelectedIndexChanged(object sender, EventArgs e)
-        {
-            
-
-        }
-
         private void btnXacNhan_Click(object sender, EventArgs e)
         {
             string cotSapXep = "";
@@ -134,21 +116,19 @@ namespace _010662_010190_Bang_Dat.ucControl
             }
             txtTimKiem.Focus();
         }
-
+        private void txtTimKiem_TextChanged(object sender, EventArgs e)
+        {
+            if (string.IsNullOrWhiteSpace(txtTimKiem.Text))
+            {
+                LoadDuLieu();
+            }
+        }
         private void txtTimKiem_KeyDown(object sender, KeyEventArgs e)
         {
             if (e.KeyCode == Keys.Enter)
             {
                 btnTimKiem.PerformClick();
                 txtTimKiem.Focus();
-            }
-        }
-
-        private void txtTimKiem_TextChanged(object sender, EventArgs e)
-        {
-            if (string.IsNullOrWhiteSpace(txtTimKiem.Text))
-            {
-                dgvXemDanhBa.DataSource = ds_LIENHE.Tables["LIENHE"];
             }
         }
     }

@@ -25,6 +25,58 @@ namespace _010662_010190_Bang_Dat.ucControl
             conn = SqlConnectionManager.GetConnection();
 
         }
+        void LoadCbMaNguoiDung()
+        {
+            try
+            {
+                if (conn.State != ConnectionState.Open)
+                    conn.Open();
+
+                SqlCommand cmdNguoiDung = new SqlCommand("select HoTen from NGUOIDUNG ", conn);
+                SqlDataReader readerPT = cmdNguoiDung.ExecuteReader();
+                cbMaNguoiDung.Items.Clear();
+                while (readerPT.Read())
+                {
+                    cbMaNguoiDung.Items.Add(readerPT["HoTen"].ToString());
+                }
+                readerPT.Close();
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show("Lỗi load ComboBox: " + ex.Message);
+            }
+            finally
+            {
+                if (conn.State == ConnectionState.Open)
+                    conn.Close();
+            }
+        }
+        void LoadCbNhom()
+        {
+            try
+            {
+                if (conn.State != ConnectionState.Open)
+                    conn.Open();
+
+                SqlCommand cmdNhom = new SqlCommand("select TenNhom from NHOM ", conn);
+                SqlDataReader readerPT = cmdNhom.ExecuteReader();
+                cbNhom.Items.Clear();
+                while (readerPT.Read())
+                {
+                    cbNhom.Items.Add(readerPT["TenNhom"].ToString());
+                }
+                readerPT.Close();
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show("Lỗi load ComboBox: " + ex.Message);
+            }
+            finally
+            {
+                if (conn.State == ConnectionState.Open)
+                    conn.Close();
+            }
+        }
         void LoadDuLieu()
         {
             ds_LIENHE.Tables.Clear();
@@ -50,6 +102,8 @@ namespace _010662_010190_Bang_Dat.ucControl
                 if (conn.State == ConnectionState.Closed)
                     conn.Open();
                 LoadDuLieu();
+                LoadCbMaNguoiDung();
+                LoadCbNhom();
                 txtHoTen.Focus();
             }
             catch (Exception ex)
@@ -60,65 +114,9 @@ namespace _010662_010190_Bang_Dat.ucControl
 
         private void ucThemDanhBa_Leave(object sender, EventArgs e)
         {
-            if (conn.State == ConnectionState.Open)
-                conn.Close();
+            /*if (conn.State == ConnectionState.Open)
+                conn.Close();*/
         }
-        /*private void btnThem_Click(object sender, EventArgs e)
-        {
-            string hoTen = txtHoTen.Text.Trim();
-            string SDT = txtSDT.Text.Trim();
-            string email = txtEmail.Text.Trim();
-            string diaChi = txtDiaChi.Text.Trim();
-            string ghiChu = txtGhiChu.Text.Trim();
-            string ngaySinh = dtpNgaySinh.Value.ToString("yyyy-MM-dd");
-
-            if (string.IsNullOrWhiteSpace(hoTen) || string.IsNullOrWhiteSpace(SDT))
-            {
-                MessageBox.Show("Vui lòng nhập Họ tên và Số điện thoại.", "Thiếu thông tin", MessageBoxButtons.OK, MessageBoxIcon.Warning);
-                return;
-            }
-
-            try
-            {
-                // Thay đổi cách thêm dữ liệu bằng cách sử dụng câu lệnh INSERT trực tiếp
-                string insertQuery = @"INSERT INTO LIENHE (HoTen, SDT, Email, DiaChi, GhiChu, NgaySinh) 
-                             VALUES (@HoTen, @SDT, @Email, @DiaChi, @GhiChu, @NgaySinh)";
-
-                using (SqlConnection conn = SqlConnectionManager.GetConnection())
-                {
-                    conn.Open();
-                    using (SqlCommand cmd = new SqlCommand(insertQuery, conn))
-                    {
-                        cmd.Parameters.AddWithValue("@HoTen", hoTen);
-                        cmd.Parameters.AddWithValue("@SDT", SDT);
-                        cmd.Parameters.AddWithValue("@Email", string.IsNullOrWhiteSpace(email) ? DBNull.Value : (object)email);
-                        cmd.Parameters.AddWithValue("@DiaChi", string.IsNullOrWhiteSpace(diaChi) ? DBNull.Value : (object)diaChi);
-                        cmd.Parameters.AddWithValue("@GhiChu", string.IsNullOrWhiteSpace(ghiChu) ? DBNull.Value : (object)ghiChu);
-                        cmd.Parameters.AddWithValue("@NgaySinh", dtpNgaySinh.Value);
-
-                        cmd.ExecuteNonQuery();
-                    }
-                }
-
-                MessageBox.Show("Thêm thành công.", "Thành công", MessageBoxButtons.OK, MessageBoxIcon.Information);
-
-                // Xóa nội dung các TextBox
-                txtHoTen.Clear();
-                txtSDT.Clear();
-                txtEmail.Clear();
-                txtDiaChi.Clear();
-                txtGhiChu.Clear();
-
-                // Tải lại dữ liệu
-                LoadDuLieu();
-            }
-            catch (Exception ex)
-            {
-                MessageBox.Show("Lỗi khi thêm dữ liệu: " + ex.Message, "Lỗi", MessageBoxButtons.OK, MessageBoxIcon.Error);
-            }
-        }*/
-
-
         private void btnThem_Click(object sender, EventArgs e)
         {
 
@@ -179,44 +177,125 @@ namespace _010662_010190_Bang_Dat.ucControl
                 MessageBox.Show("Lỗi khi thêm dữ liệu: " + ex.Message, "Lỗi", MessageBoxButtons.OK, MessageBoxIcon.Error);
             }
         }
-
-        private void btnXoa_Click(object sender, EventArgs e)
-        {
-            List<int> danhSachXoa = new List<int>();
-
-            foreach (DataGridViewRow row in dgvThemDanhBa.Rows)
+        
+            private void btnXoa_Click(object sender, EventArgs e)
             {
-                if (row.Cells["colChon"].Value != null && Convert.ToBoolean(row.Cells["colChon"].Value) == true)
-                {
-                    int maLienHe = Convert.ToInt32(row.Cells["MaLienHe"].Value);
-                    danhSachXoa.Add(maLienHe);
-                }
-            }
+                List<int> danhSachXoa = new List<int>();
 
-            if (danhSachXoa.Count == 0)
-            {
-                MessageBox.Show("Vui lòng chọn ít nhất một dòng để xóa.");
-                return;
-            }
-
-                foreach (int maLienHe in danhSachXoa)
+                foreach (DataGridViewRow row in dgvThemDanhBa.Rows)
                 {
-                    string query = "DELETE FROM LIENHE WHERE MaLienHe = @MaLienHe";
-                    using (SqlCommand cmd = new SqlCommand(query, conn))
+                    if (row.Cells["colChon"].Value != null && Convert.ToBoolean(row.Cells["colChon"].Value) == true)
                     {
-                        cmd.Parameters.AddWithValue("@MaLienHe", maLienHe);
-                        cmd.ExecuteNonQuery();
+                        int maLienHe = Convert.ToInt32(row.Cells["MaLienHe"].Value);
+                        danhSachXoa.Add(maLienHe);
                     }
                 }
-            MessageBox.Show("Đã xóa " + danhSachXoa.Count + " dòng.");
-            LoadDuLieu();
-        }
 
+                if (danhSachXoa.Count == 0)
+                {
+                    MessageBox.Show("Vui lòng chọn ít nhất một dòng để xóa.", "Thông báo", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                    return;
+                }
+
+                try
+                {
+                    using (SqlConnection conn = SqlConnectionManager.GetConnection())
+                    {
+                        if (conn.State == ConnectionState.Closed)
+                            conn.Open();
+
+                        using (SqlTransaction transaction = conn.BeginTransaction())
+                        {
+                            try
+                            {
+                                foreach (int maLienHe in danhSachXoa)
+                                {
+                                    string query = "DELETE FROM LIENHE WHERE MaLienHe = @MaLienHe";
+                                    using (SqlCommand cmd = new SqlCommand(query, conn, transaction))
+                                    {
+                                        cmd.Parameters.AddWithValue("@MaLienHe", maLienHe);
+                                        cmd.ExecuteNonQuery();
+                                    }
+
+                                    DataRow[] rowsToDelete = ds_LIENHE.Tables["LIENHE"].Select($"MaLienHe = {maLienHe}");
+                                    if (rowsToDelete.Length > 0)
+                                    {
+                                        rowsToDelete[0].Delete();
+                                    }
+                                }
+
+                                transaction.Commit();
+                                ds_LIENHE.Tables["LIENHE"].AcceptChanges();
+
+                                MessageBox.Show($"Đã xóa {danhSachXoa.Count} dòng.", "Thành công", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                            }
+                            catch (Exception ex)
+                            {
+                                transaction.Rollback();
+                                MessageBox.Show($"Lỗi khi xóa dữ liệu: {ex.Message}", "Lỗi", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                                return;
+                            }
+                        }
+
+                        conn.Close();
+                    }
+                    LoadDuLieu();
+                }
+                catch (Exception ex)
+                {
+                    MessageBox.Show($"Lỗi khi thực hiện xóa: {ex.Message}", "Lỗi", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                }
+            }
         private void btnTaiLai_Click(object sender, EventArgs e)
         {
             LoadDuLieu();
         }
 
-       
+        private void btnSua_Click(object sender, EventArgs e)
+        {
+            string hoTen = txtHoTen.Text.Trim();
+            string SDT = txtSDT.Text.Trim();
+            string email = txtEmail.Text.Trim();
+            string diaChi = txtDiaChi.Text.Trim();
+            string ghiChu = txtGhiChu.Text.Trim();
+            string ngaySinh = dtpNgaySinh.Value.ToString("yyyy-MM-dd");
+
+            if (string.IsNullOrWhiteSpace(hoTen) || string.IsNullOrWhiteSpace(SDT))
+            {
+                MessageBox.Show("Vui lòng nhập Họ tên và Số điện thoại.", "Thiếu thông tin", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                return;
+            }
+
+            string hoTenFilter = hoTen.Replace("'", "''");
+            DataRow[] rowToUpdate = ds_LIENHE.Tables["LIENHE"].Select($"hoTen = '{hoTenFilter}'");
+
+            if (rowToUpdate != null)
+            {
+                DataRow row = rowToUpdate[0];
+                row["hoTen"] = hoTen;
+                row["SDT"] = SDT;
+                row["email"] = email;
+                row["diaChi"] = diaChi;
+                row["ghiChu"] = ghiChu;
+                row["ngaySinh"] = ngaySinh;
+
+                SqlDataAdapter da = new SqlDataAdapter("SELECT MaLienHe, HoTen, SDT, Email, DiaChi, GhiChu, NgaySinh FROM LIENHE", conn);
+                SqlCommandBuilder cmb = new SqlCommandBuilder(da);
+                da.Update(ds_LIENHE, "LIENHE");
+
+                MessageBox.Show("Sửa thành công.");
+                txtHoTen.Clear();
+                txtSDT.Clear();
+                txtEmail.Clear();
+                txtDiaChi.Clear();
+                txtGhiChu.Clear();
+                LoadDuLieu();
+            }
+            else
+            {
+                MessageBox.Show("Không tìm thấy dữ liệu để sửa.");
+            }
+           
+        }
     }
 }
